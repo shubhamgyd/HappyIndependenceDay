@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      
+
+ * {
+  padding: 0;
+  margin: 0;
+}
+
+.secondBox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 33.3vh;
+  background-color: green;
+  z-index: 2;
+}
+.firstBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 33.3vh; 
+  background-color: rgb(255, 126, 5);
+  z-index: 1;
+}
+
+
+.wheel {
+  height: 33.3vh;
+  width: 33.3vh;
+  border: 2px solid darkblue;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.wheel .line {
+  height: 100%;
+  width: 2px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  background: darkblue;
+}
+
+.line:nth-child(1) { transform: rotate(15deg); }
+.line:nth-child(2) { transform: rotate(30deg); }
+.line:nth-child(3) { transform: rotate(45deg); }
+.line:nth-child(4) { transform: rotate(60deg); }
+.line:nth-child(5) { transform: rotate(75deg); }
+.line:nth-child(6) { transform: rotate(90deg); }
+.line:nth-child(7) { transform: rotate(105deg); }
+.line:nth-child(8) { transform: rotate(120deg); }
+.line:nth-child(9) { transform: rotate(135deg); }
+.line:nth-child(10) { transform: rotate(150deg); }
+.line:nth-child(11) { transform: rotate(165deg); }
+.line:nth-child(12) { transform: rotate(180deg); }
+
+    </style>
+  </head>
+  <body>
+    <div class="secondBox"></div>
+    <div class="wheel">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+  </div>
+    <div class="firstBox"></div>
+  </body>
+</html>
